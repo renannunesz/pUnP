@@ -21,28 +21,22 @@ namespace pUnP
             dadosMoedas();
         }
 
-        public void mudaMoeda()
+        public async void dadosMoedas()
         {
-
-            string TextoTeste = "Esse texto é um teste";
-
-            lblMoeda1.Text = TextoTeste;
-
-        }
-
-        async void dadosMoedas()
-        {
-
-            
-            string enderecoUrl = "https://api.nomics.com/v1/currencies/ticker?key=880b3ff2d79ab3b10e72d99097082ed9da6d7d47&ids=BTC,ETH,XRP&interval=1d,30d&convert=EUR&platform-currency=ETH&per-page=100&page=1";
+            string dadosUrl = "https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL";
             HttpClient client = new HttpClient();
-            var json = await client.GetStringAsync(enderecoUrl);
-            //var dados = JsonConvert.DeserializeObject<List<string>>(json);
+            var jsonDados = await client.GetStringAsync(dadosUrl);
+            var Moedas = JsonConvert.DeserializeObject<Rootobject>(jsonDados);
 
-            var Moedas = JsonConvert.DeserializeObject<List<Moedas>>(json);
+            lblMoeda.Text = Moedas.BTCBRL.name;
+            lblSiglaOrigem.Text = Moedas.BTCBRL.code;
+            lblSiglaDestino.Text = Moedas.BTCBRL.codein;
+            lblCompra.Text = Moedas.BTCBRL.bid;
+            lblVenda.Text = Moedas.BTCBRL.ask;            
 
-            //lblMoeda1.Text = Moedas.''
         }
+
+
 
     }
 }

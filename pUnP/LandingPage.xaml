@@ -4,13 +4,18 @@
              x:Class="pUnP.LandingPage">
     
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Segunda Pagina! Construa seu projeto: Cotação de Moedas!" FontSize="Title" Padding="30,10,30,10" />
+        <StackLayout Padding="30,10,30,10">
+            
+            <Label Text="Conversão de Moedas" FontSize="Title" />
 
-            <Label x:Name="lblPesqMoeda" Text="Moeda:" FontSize="16" Padding="30,0,30,0"/>
-            <Entry x:Name="entPesqMoeda" />
-
-            <Label x:Name="lblMoeda1" Text="Moeda 1" />
+            <Label x:Name="lblTitMoeda" Text="Moeda:" FontSize="16" />
+            
+            <Label x:Name="lblMoeda" Text="" />
+            <Label x:Name="lblSiglaOrigem" Text="" />
+            <Label x:Name="lblSiglaDestino" Text="" />
+            <Label x:Name="lblCompra" Text="" />
+            <Label x:Name="lblVenda" Text="" />
+            <Label x:Name="lblDataCotacao" Text="" />
 
         </StackLayout>
     </ContentPage.Content>
