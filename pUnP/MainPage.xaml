@@ -3,11 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="pUnP.MainPage">
 
-    <StackLayout HorizontalOptions="CenterAndExpand" >
+    <StackLayout Padding="30,10,30,10" >
 
         <Image Source="logo.png" HeightRequest="120" />
 
-        <Label Text="Cotação de Moedas." FontSize="Title" Padding="30,10,30,10"/>
+        <Label Text="Cotação de Moedas" FontSize="Title" HorizontalTextAlignment="Center"/>
 
         <Label x:Name="lblUser" Text="Usuario:" FontSize="16" Padding="30,0,30,0"/>
 
@@ -17,7 +17,11 @@
 
         <Entry x:Name="entPass" IsPassword="True"/>
 
-        <Button x:Name="btnAutenticar" Text="Autenticar" Clicked="btnEnviar_Clicked" />
+        <Button x:Name="btnAutenticar" Text="Acessar" Clicked="btnEnviar_Clicked" />
+
+        <Label x:Name="lblCadastro" Text="Cadastrar Usuário" TextDecorations="Underline" TextColor="Blue" />
+        
+        <Label x:Name="lblSenha" Text="Esqueci minha senha" TextDecorations="Underline" TextColor="Blue" />
 
     </StackLayout>
 

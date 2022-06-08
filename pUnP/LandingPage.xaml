@@ -1,22 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="pUnP.LandingPage">
+             x:Class="pUnP.LandingPage"
+             Title="Voltar">
     
     <ContentPage.Content>
         <StackLayout Padding="30,10,30,10">
             
             <Label Text="Conversão de Moedas" FontSize="Title" />
 
-            <Label x:Name="lblTitMoeda" Text="Moeda:" FontSize="16" />
-            
-            <Label x:Name="lblMoeda" Text="" />
-            <Label x:Name="lblSiglaOrigem" Text="" />
-            <Label x:Name="lblSiglaDestino" Text="" />
-            <Label x:Name="lblCompra" Text="" />
-            <Label x:Name="lblVenda" Text="" />
-            <Label x:Name="lblDataCotacao" Text="" />
+            <Label x:Name="lblTitMoeda" Text="" FontSize="16" />
+
+            <Grid Padding="5,5,5,5" BackgroundColor="Black">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+
+                <BoxView BackgroundColor="White" />
+                <Label x:Name="lblRowGrid_1" Text="" FontSize="15"/>
+                <BoxView Grid.Row="1" BackgroundColor="White" />
+                <Label x:Name="lblRowGrid_2" Grid.Row="1" Text="" FontSize="15"/>
+                <BoxView Grid.Row="2" BackgroundColor="White" />
+                <Label x:Name="lblRowGrid_3" Grid.Row="2" Text="" FontSize="15"/>
+
+            </Grid>
+
+            <Label x:Name="lblFontePesquisa" Text="Fonte: https://economia.awesomeapi.com.br/" />
+
+            <Button x:Name="btnEnviarEmail" Text="Enviar por email" Clicked="btnEnviarEmail_Clicked" />
 
         </StackLayout>
+      
     </ContentPage.Content>
 </ContentPage>
